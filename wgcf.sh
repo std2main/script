@@ -49,6 +49,7 @@ elif [[ $(command -v dpkg) ]]; then
     PKGT='(dpkg)'
     OS_ARCH=$(dpkg --print-architecture | awk -F- '{ print $NF }')
 else
+    PKGT='NULL'
     OS_ARCH=$(uname -m)
 fi
 case ${OS_ARCH} in
